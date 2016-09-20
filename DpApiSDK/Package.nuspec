@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DpApiSDK</id>
+    <version>1.0.0</version>
+    <authors>Umit AKKAYA</authors>
+    <owners>Umit AKKAYA</owners>
+    <licenseUrl>https://github.com/umitakkaya/dp-api-sdk/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/umitakkaya/dp-api-sdk</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Unofficial Docplanner Integration API SDK</description>
+    <releaseNotes>Initial release of the DP Integration API SDK.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Docplanner API SDK</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="RestSharp" version="105.2.3" />
+    </dependencies>
+  </metadata>
+</package>

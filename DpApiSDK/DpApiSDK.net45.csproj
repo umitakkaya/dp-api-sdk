@@ -41,10 +41,6 @@
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RestSharp.Newtonsoft.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.Newtonsoft.Json.1.0.0\lib\net45\RestSharp.Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +56,7 @@
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="LocaleSettings.cs" />
+    <Compile Include="NewtonsoftJsonSerializer.cs" />
     <Compile Include="NotificationTypes.cs" />
     <Compile Include="Representation\AddressService.cs" />
     <Compile Include="Representation\AuthenticationErrorResponse.cs" />
