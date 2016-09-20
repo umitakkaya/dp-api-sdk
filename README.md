@@ -12,7 +12,7 @@ Or you can include the project into your solution and use it directly by referen
 DpRestClient client = new DpRestClient(
     "{{clientId}}", 
     "{{clientSecret}}", 
-    Locale.PL // One of the Locale
+    Locale.PL // One of the Locales
 );
 
 var facility =  client.GetFacilities().First();
