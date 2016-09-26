@@ -1,6 +1,7 @@
 ﻿using DpApiSDK.Representation;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Collections.Generic;
 
 namespace DpApiSDK
 {
@@ -10,22 +11,45 @@ namespace DpApiSDK
         public const string DATETIME_FORMAT = "yyyy-MM-ddTHH:mm:sszzz";
 
         private static object locker = new object();
-        private static AuthorizationToken _authorizationToken;
-        public static AuthorizationToken AuthorizationToken
+        private static Dictionary<string, AuthorizationToken> _tokenStorage = new Dictionary<string, AuthorizationToken>();
+        public static Dictionary<string, AuthorizationToken> TokenStorage
         {
             get
             {
                 lock (locker)
                 {
-                    return _authorizationToken;
+                    return _tokenStorage;
                 }
             }
             internal set
             {
                 lock (locker)
                 {
-                    _authorizationToken = value;
+                    _tokenStorage = value;
                 }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static AuthorizationToken GetToken(string clientId)
+        {
+            AuthorizationToken token = null;
+            _tokenStorage.TryGetValue(clientId, out token);
+            return token;
+        }
+
+        public static void SetToken(string clientId, AuthorizationToken token)
+        {
+            if (_tokenStorage.ContainsKey(clientId))
+            {
+                _tokenStorage[clientId] = token;
+            }
+            else
+            {
+                _tokenStorage.Add(clientId, token);
             }
         }
 

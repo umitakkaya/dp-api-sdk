@@ -470,19 +470,20 @@ namespace DpApiSDK
                 throw new AuthenticationException();
             }
 
-            Globals.AuthorizationToken = token;
+            Globals.SetToken(_clientId, token);
 
-            _client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(Globals.AuthorizationToken.AccessToken, TOKEN_TYPE);
+            _client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(token.AccessToken, TOKEN_TYPE);
         }
 
         private void CheckAndGetToken()
         {
-            if( Globals.AuthorizationToken != null && Globals.AuthorizationToken.ExpiresAt > DateTime.Now)
+            var token = Globals.GetToken(_clientId);
+            if (token != null && token.ExpiresAt > DateTime.Now)
             {
                 return;
             }
-            
-             GetToken();
+
+            GetToken();
         }
 
         private void SetupSerializer()
