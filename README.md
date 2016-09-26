@@ -8,7 +8,7 @@ PM> Install-Package DpApiSDK
 Or you can include the project into your solution and use it directly by referencing it.
 
 ## Usage example:
-```
+```csharp
 DpRestClient client = new DpRestClient(
     "{{clientId}}", 
     "{{clientSecret}}", 
