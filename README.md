@@ -1,6 +1,6 @@
 # Unofficial Docplanner Integration API SDK
 
-Install using NuGet:
+Install [DpApiSDK through NuGet](https://www.nuget.org/packages/DpApiSDK):
 ```
 PM> Install-Package DpApiSDK
 ```
