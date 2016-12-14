@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio Express 14 for Web
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DpApiSDK", "DpApiSDK\DpApiSDK.csproj", "{E08CD2B5-7F51-4161-9C83-7D8696676255}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DpApiSDK.net45", "DpApiSDK\DpApiSDK.net45.csproj", "{8BE776D5-29A6-4654-8197-044190B94359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DpApiSDK.net40", "DpApiSDK\DpApiSDK.net40.csproj", "{B03A64E2-9B61-4799-9D73-D2042FB0454B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8BE776D5-29A6-4654-8197-044190B94359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE776D5-29A6-4654-8197-044190B94359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE776D5-29A6-4654-8197-044190B94359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03A64E2-9B61-4799-9D73-D2042FB0454B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03A64E2-9B61-4799-9D73-D2042FB0454B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03A64E2-9B61-4799-9D73-D2042FB0454B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03A64E2-9B61-4799-9D73-D2042FB0454B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

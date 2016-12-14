@@ -356,6 +356,54 @@ namespace DpApiSDK
             return response.StatusCode == HttpStatusCode.NoContent;
         }
 
+        public Booking MoveVisit(string facilityId, string doctorId, string addressId, string visitId, string addressServiceId, DateTimeOffset target)
+        {
+            var request = CreateRequest("/facilities/{facilityId}/doctors/{doctorId}/addresses/{addressId}/bookings/{visitId}", Method.POST);
+
+            request.AddUrlSegment("facilityId", facilityId);
+            request.AddUrlSegment("doctorId", doctorId);
+            request.AddUrlSegment("addressId", addressId);
+            request.AddUrlSegment("visitId", visitId);
+
+            var jsonBody = new
+            {
+                Start = target,
+                AddressServiceId = addressServiceId
+            };
+
+            request.AddJsonBody(jsonBody);
+
+            var response = CreateExecute<Booking>(request);
+
+            return response.Data;
+        }
+
+        /// <summary>
+        /// Report that a patient showed up to a visit.
+        /// </summary>
+        /// <param name="facilityId"></param>
+        /// <param name="doctorId"></param>
+        /// <param name="addressId"></param>
+        /// <param name="visitId"></param>
+        /// <param name="isPatientPresent">If patient came to visit true, otherwise false</param>
+        /// <returns>if successfully reported returns true, otherwise means reporting failed</returns>
+        public bool ReportPresence(string facilityId, string doctorId, string addressId, string visitId, bool isPatientPresent)
+        {
+            var method = isPatientPresent ? Method.POST : Method.DELETE;
+
+            var request = CreateRequest("/facilities/{facilityId}/doctors/{doctorId}/addresses/{addressId}/bookings/{visitId}/presence/presence", method);
+
+            request.AddUrlSegment("facilityId", facilityId);
+            request.AddUrlSegment("doctorId", doctorId);
+            request.AddUrlSegment("addressId", addressId);
+            request.AddUrlSegment("visitId", visitId);
+
+            var response = _client.Execute<BaseResponse>(request);
+
+            return response.StatusCode == HttpStatusCode.NoContent;
+        }
+
+
         public Notification GetNotification()
         {
             var request = CreateRequest("/notifications");

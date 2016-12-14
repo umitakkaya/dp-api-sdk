@@ -68,6 +68,8 @@
     <Compile Include="Representation\BookingExtraFields.cs" />
     <Compile Include="Representation\BookingRequest.cs" />
     <Compile Include="Representation\CalendarBreak.cs" />
+    <Compile Include="Representation\CancelingBooking.cs" />
+    <Compile Include="Representation\CreatingBooking.cs" />
     <Compile Include="Representation\DpAddress.cs" />
     <Compile Include="Representation\DpDoctor.cs" />
     <Compile Include="Representation\DpCollection.cs" />

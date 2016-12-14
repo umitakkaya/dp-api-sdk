@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DpApiSDK</id>
+    <version>1.1.0</version>
+    <authors>Umit AKKAYA</authors>
+    <owners>Umit AKKAYA</owners>
+    <licenseUrl>https://github.com/umitakkaya/dp-api-sdk/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/umitakkaya/dp-api-sdk</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Unofficial Docplanner Integration API SDK</description>
+    <summary>Unofficial Docplanner Integration API SDK</summary>
+    <releaseNotes>Visit moving, patient presence reporting, and new notification types</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Docplanner API SDK</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+      <dependency id="RestSharp" version="105.2.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\net40\Release\DpApiSDK.dll" target="lib\net40\DpApiSDK.dll" />
+    <file src="bin\net40\Release\DpApiSDK.pdb" target="lib\net40\DpApiSDK.pdb" />
+    <file src="bin\net40\Release\DpApiSDK.dll.config" target="lib\net40\DpApiSDK.dll.config" />
+    <file src="bin\net45\Release\DpApiSDK.dll" target="lib\net45\DpApiSDK.dll" />
+    <file src="bin\net45\Release\DpApiSDK.pdb" target="lib\net45\DpApiSDK.pdb" />
+    <file src="bin\net45\Release\DpApiSDK.dll.config" target="lib\net45\DpApiSDK.dll.config" />
+    <file src="bin\Release\DpApiSDK.dll" target="lib\net462\DpApiSDK.dll" />
+    <file src="bin\Release\DpApiSDK.pdb" target="lib\net462\DpApiSDK.pdb" />
+    <file src="bin\Release\DpApiSDK.dll.config" target="lib\net462\DpApiSDK.dll.config" />
+  </files>
+</package>

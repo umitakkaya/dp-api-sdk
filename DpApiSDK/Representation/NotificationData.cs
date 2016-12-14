@@ -15,5 +15,8 @@ namespace DpApiSDK.Representation
         public RealtimeBooking VisitBookingRequest { get; set; }
         public Booking OldVisitBooking { get; set; }
         public Booking NewVisitBooking { get; set; }
+        public CreatingBooking CreatingBooking { get; set; }
+        public CancelingBooking CancelingBooking { get; set; }
+        public CalendarBreak Break { get; set; }
     }
 }

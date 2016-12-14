@@ -27,6 +27,7 @@ namespace DpApiSDK
         private const string TZ_CENTRAL_EUROPE   = "Central Europe Standard Time";
         private const string TZ_CENTRAL_EUROPEAN = "Central European Standard Time";
         private const string TZ_GTB_STANDART     = "GTB Standard Time";
+        private const string TZ_TURKEY_STANDART = "Turkey Standard Time";
         private const string TZ_WESTERN_EUROPE   = "W. Europe Standard Time";
         
         
@@ -62,7 +63,7 @@ namespace DpApiSDK
                 case Locale.PL:
                     return TZ_CENTRAL_EUROPEAN;
                 case Locale.TR:
-                    return TZ_GTB_STANDART;
+                    return TZ_TURKEY_STANDART;
                 case Locale.CZ:
                     return TZ_CENTRAL_EUROPE;
                 case Locale.DE:
